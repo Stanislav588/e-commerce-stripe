@@ -13,7 +13,7 @@ const initialState: { cartProducts: ProductState } = {
 };
 export const fetchAddToCart = createAsyncThunk<
   Product[],
-  { productId: string | undefined; size: number; navigate: NavigateFunction }
+  { productId: string | undefined; size: string; navigate: NavigateFunction }
 >(
   "cart/fetchAddToCart",
   async ({ productId, size, navigate }, { dispatch, rejectWithValue }) => {

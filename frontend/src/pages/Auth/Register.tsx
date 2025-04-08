@@ -3,22 +3,24 @@ import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 
 import TextField from "@mui/material/TextField";
-import { fetchRegister } from "../../redux/authSlice";
+import { LoginData, fetchRegister } from "../../redux/authSlice";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
 import { enqueueSnackbar } from "notistack";
+
+import { AppDispatch } from "../../redux/types.ts";
 export default function Register() {
   window.scrollTo(0, 0);
   const loader = useSelector((state: any) => state.auth.user.status);
   const isLoading = loader === "loading";
-  const dispatch = useDispatch();
+  const dispatch = useDispatch<AppDispatch>();
+
   const navigate = useNavigate();
 
   const {
     register,
     handleSubmit,
-    setError,
-    formState: { errors, isValid },
+    formState: { errors },
   } = useForm({
     defaultValues: {
       email: "stason@gmail.com",

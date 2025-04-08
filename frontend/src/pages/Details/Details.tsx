@@ -2,7 +2,7 @@ import { ChangeEvent, useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate, useParams } from "react-router-dom";
 import { fetchProductDetails } from "../../redux/productSlice";
-import { AppDispatch, Product } from "../../redux/types";
+import { AppDispatch } from "../../redux/types";
 import { Box, Button, Skeleton } from "@mui/material";
 import { GoPlus } from "react-icons/go";
 import { fetchAddToCart } from "../../redux/cartSlice";
@@ -24,7 +24,7 @@ import {
 import { enqueueSnackbar } from "notistack";
 export const Details = () => {
   const product = useSelector(
-    (state: RootState) => state.item.productDetails.data as Product
+    (state: RootState) => state.item.productDetails.data as any
   );
   const productStatus = useSelector(
     (state: RootState) => state.item.productDetails.status
@@ -35,7 +35,7 @@ export const Details = () => {
   const [error, setError] = useState<string | null>(null);
   const [selectedImg, setSelectedImg] = useState<number>(0);
   const [openMaterial, setOpenMaterial] = useState<boolean>(false);
-  const [selectedSize, setSelectedSize] = useState<number>(0);
+  const [selectedSize, setSelectedSize] = useState<string>("");
   const cartStatus = useSelector(
     (state: RootState) => state.cart.cartProducts.status
   );

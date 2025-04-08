@@ -8,10 +8,11 @@ import { useDispatch, useSelector } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
 
 import { enqueueSnackbar } from "notistack";
+import { AppDispatch } from "../../redux/store";
 
 export default function Login() {
   const navigate = useNavigate();
-  const dispatch = useDispatch();
+  const dispatch = useDispatch<AppDispatch>();
   window.scrollTo(0, 0);
   const loader = useSelector((state: any) => state.auth.user.status);
 
@@ -20,7 +21,7 @@ export default function Login() {
     register,
     handleSubmit,
     setError,
-    formState: { errors, isValid },
+    formState: { errors },
   } = useForm({
     defaultValues: {
       email: "",

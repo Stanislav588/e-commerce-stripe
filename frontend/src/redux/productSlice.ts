@@ -29,19 +29,19 @@ const initialState: {
   },
 };
 
-export const fetchProducts = createAsyncThunk<
-  Product[],
-  { rejectWithValue: string }
->("products/fetchProducts", async (_, { rejectWithValue }) => {
-  try {
-    const { data } = await axios.get("http://localhost:3000/all");
-    return data;
-  } catch (error: any) {
-    return rejectWithValue(
-      error.response?.data?.message || "Failed to get products"
-    );
+export const fetchProducts = createAsyncThunk(
+  "products/fetchProducts",
+  async (_, { rejectWithValue }) => {
+    try {
+      const { data } = await axios.get("http://localhost:3000/all");
+      return data;
+    } catch (error: any) {
+      return rejectWithValue(
+        error.response?.data?.message || "Failed to get products"
+      );
+    }
   }
-});
+);
 export const fetchProductsByGenreAndCategory = createAsyncThunk(
   "products/fetchProductsByGenreAndCategory",
   async (

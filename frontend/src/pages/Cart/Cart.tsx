@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-import { AppDispatch, CartProductDetails } from "../../redux/types";
+import { AppDispatch } from "../../redux/types";
 import { useEffect, useState } from "react";
 import { fetchCartProduct, fetchDeleteProduct } from "../../redux/cartSlice";
 import { RiCloseFill } from "react-icons/ri";
@@ -15,9 +15,7 @@ export const Cart = () => {
 
   const dispatch = useDispatch<AppDispatch>();
 
-  const cart: CartProductDetails[] = useSelector(
-    (state: RootState) => state.cart.cartProducts.data
-  );
+  const cart = useSelector((state: RootState) => state.cart.cartProducts.data);
 
   const handlePayment = async () => {
     dispatch(fetchAddPayment({ products: cart }));

@@ -17,7 +17,7 @@ export interface LoginData {
 }
 export const fetchRegister = createAsyncThunk(
   "user/fetchRegister",
-  async (value, { rejectWithValue }) => {
+  async (value: LoginData, { rejectWithValue }) => {
     try {
       const { data } = await axios.post(
         "http://localhost:3000/auth/register",
@@ -36,7 +36,7 @@ export const fetchRegister = createAsyncThunk(
 );
 export const fetchLogin = createAsyncThunk(
   "user/fetchLogin",
-  async (value, { rejectWithValue }) => {
+  async (value: LoginData, { rejectWithValue }) => {
     try {
       const { data } = await axios.post(
         "http://localhost:3000/auth/login",
