@@ -291,7 +291,11 @@ export const Details = () => {
           </div>
         </div>
       </motion.div>
-      <SimilarProducts productName={product?.brand} id={_id} />
+      <SimilarProducts
+        product={product}
+        productName={product?.brand}
+        id={_id}
+      />
     </>
   );
 };

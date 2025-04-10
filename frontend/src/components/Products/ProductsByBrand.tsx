@@ -2,6 +2,7 @@ import { useSelector } from "react-redux";
 import { Link, useParams } from "react-router-dom";
 import { RootState } from "../../redux/store";
 import { ProductItem } from "./ProductItem";
+import { Product } from "../../redux/types";
 
 export const ProductsByBrand = () => {
   const { brand } = useParams();
@@ -15,11 +16,13 @@ export const ProductsByBrand = () => {
       <h1 className="text-2xl mb-10">{brand} Catalog</h1>
 
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-        {productsByBrand?.map((prod) => {
+        {productsByBrand?.map((prod: Product) => {
           return (
-            <Link to={`/products/${prod._id}/${prod.gender}`}>
-              <ProductItem {...prod} />
-            </Link>
+            <div key={prod._id}>
+              <Link to={`/products/${prod._id}/${prod.gender}`}>
+                <ProductItem {...prod} />
+              </Link>
+            </div>
           );
         })}
       </div>

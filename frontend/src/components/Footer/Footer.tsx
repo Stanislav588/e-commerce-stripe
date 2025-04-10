@@ -38,9 +38,7 @@ export const Footer = () => {
               <h1 className="text-lg font-semibold">Women clothes</h1>
               {womenProductCategories.map((category) => (
                 <div key={category.id}>
-                  <Link
-                    to={`/products/category/${category.title}/gender/Women`}
-                  >
+                  <Link to={`/all/category/${category.title}/gender/Women`}>
                     <p className="cursor-pointer hover:underline">
                       {category.title}
                     </p>
@@ -52,7 +50,7 @@ export const Footer = () => {
               <h1 className="text-lg font-semibold">Men clothes</h1>
               {menProductCategories.map((category) => (
                 <div key={category.id}>
-                  <Link to={`/products/category/${category.title}/gender/Men`}>
+                  <Link to={`/all/category/${category.title}/gender/Men`}>
                     <p className="cursor-pointer hover:underline">
                       {category.title}
                     </p>
@@ -64,7 +62,7 @@ export const Footer = () => {
               <h1 className="text-lg font-semibold">Kids clothes</h1>
               {kidsProductCategories.map((category) => (
                 <div key={category.id}>
-                  <Link to={`/products/category/${category.title}/gender/Kids`}>
+                  <Link to={`/all/category/${category.title}/gender/Kids`}>
                     <p className="cursor-pointer hover:underline">
                       {category.title}
                     </p>

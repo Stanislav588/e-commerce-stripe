@@ -26,13 +26,13 @@ export const createProduct = async (req, res) => {
 
 export const getAllProducts = async (req, res) => {
   try {
-    const user = await ProductModel.find();
-    if (!user) {
-      return res.json({
-        message: "Product not found",
+    const products = await ProductModel.find();
+    if (!products) {
+      return res.status(404).json({
+        message: "Products not found",
       });
     }
-    res.json(user);
+    res.json(products);
   } catch (error) {
     return res.status(500).json({
       message: "Failed to get products",

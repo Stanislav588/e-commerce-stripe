@@ -39,8 +39,8 @@ export const createCheckOutSession = async (req, res) => {
       line_items: lineItems,
       mode: "payment",
       automatic_tax: { enabled: true },
-      success_url: "http://localhost:5173/order-success",
-      cancel_url: "http://localhost:5173/cancel",
+      success_url: "http://localhost:4500/order-success",
+      cancel_url: "http://localhost:4500/cancel",
       metadata: {
         userId: req.userId,
         appliedCoupon: "None",

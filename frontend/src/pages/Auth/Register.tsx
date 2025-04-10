@@ -20,6 +20,7 @@ export default function Register() {
   const {
     register,
     handleSubmit,
+    setError,
     formState: { errors },
   } = useForm({
     defaultValues: {
@@ -34,12 +35,17 @@ export default function Register() {
       const res = await dispatch(fetchRegister(values)).unwrap();
       if (res?.token) {
         navigate("/auth/login");
-        enqueueSnackbar("You registered successfully!", {
+        return enqueueSnackbar("You registered successfully!", {
           variant: "success",
         });
       }
     } catch (error: any) {
-      console.log(error?.message);
+      setError("root", {
+        type: "manual",
+        message: "User already exists",
+      });
+
+      return console.log(error?.message);
     }
   }
   return (
@@ -91,6 +97,11 @@ export default function Register() {
         >
           {isLoading ? "Loading..." : "Register"}
         </Button>
+        {errors.root && (
+          <p className="text-red-500 text-center text-sm mt-2">
+            {errors.root.message}
+          </p>
+        )}
       </form>
       <p className="mt-8">
         Allready have an account?{" "}

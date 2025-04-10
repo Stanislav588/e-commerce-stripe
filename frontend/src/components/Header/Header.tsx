@@ -13,7 +13,7 @@ import { enqueueSnackbar } from "notistack";
 import { RootState } from "../../redux/store";
 import { IoCloseCircleOutline } from "react-icons/io5";
 import { ContextApi } from "../context/ContextApi";
-import { SmallPopUp } from "./SmallPopUp";
+
 import { IoIosHeartEmpty } from "react-icons/io";
 import { AppDispatch } from "../../redux/types";
 
@@ -58,7 +58,6 @@ export default function Header() {
     enqueueSnackbar("Log out successfully!", { variant: "success" });
   };
 
-  console.log(screenY);
   return (
     <>
       <div className={`py-6 sticky w-full top-0 z-30 px-9  bg-white shadow-md`}>
@@ -183,7 +182,6 @@ export default function Header() {
           />
         )}
       </div>
-      {isOpenPopup && <SmallPopUp setIsOpenPopup={setIsOpenPopup} />}
     </>
   );
 }
