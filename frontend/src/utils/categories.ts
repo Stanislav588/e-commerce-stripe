@@ -190,6 +190,6 @@ export const prices: { from: number | null; to: number | null }[] = [
   },
   {
     from: 320,
-    to: 1000,
+    to: null,
   },
 ];

@@ -74,7 +74,8 @@ export const FilterByPrice = () => {
                   className="border flex items-center justify-between p-3 cursor-pointer hover:bg-gray-200 border-y-gray-200"
                 >
                   <li>
-                    $ {price.from} - $ {price.to}
+                    $ {price.to ? price.from : `${price.from + " +"}`}{" "}
+                    {price.to ? `- $ ${price.to}` : ""}
                   </li>
                   {selectedFrom === price.from && price.to && <IoMdCheckmark />}
                 </div>
