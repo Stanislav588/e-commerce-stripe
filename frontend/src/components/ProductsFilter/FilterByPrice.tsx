@@ -36,7 +36,7 @@ export const FilterByPrice = () => {
       return error.message;
     }
   }, []);
-  console.log(selectedFrom, selectedTo);
+
   return (
     <div
       onClick={(e) => e.stopPropagation()}

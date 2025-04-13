@@ -17,7 +17,7 @@ export const ProductsByCategory = () => {
   const categoryProduct = useSelector(
     (state: RootState) => state.item.productGenreAndCategory.data
   );
-  console.log("Brand", selectedBrand);
+
   let filteredProducts = categoryProduct?.filter(
     (item) => item.category === category && item.gender === gender
   );
