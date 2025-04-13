@@ -24,9 +24,9 @@ export default function Register() {
     formState: { errors },
   } = useForm({
     defaultValues: {
-      email: "stason@gmail.com",
-      fullName: "Stanislav",
-      password: "12345",
+      email: "",
+      fullName: "",
+      password: "",
     },
   });
 
