@@ -50,7 +50,7 @@ export default function Login() {
     }
   }
   return (
-    <div className="bg-white block mt-[100px] p-6 w-[500px] mx-auto ">
+    <div className="bg-white block mt-[100px] p-6  md:w-[500px] w-[80%] mx-auto ">
       <h1 className="text-3xl font-medium mb-7">Login</h1>
       <form onSubmit={handleSubmit(handleSubmitForm)}>
         <Box
@@ -58,7 +58,7 @@ export default function Login() {
             display: "flex",
             justifyContent: "center",
             flexDirection: "column",
-            width: 500,
+            width: "100%",
             gap: "15px",
             maxWidth: "100%",
           }}
