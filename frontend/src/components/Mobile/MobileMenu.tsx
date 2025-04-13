@@ -20,11 +20,7 @@ export const MobileMenu = () => {
 
         {userData?.email === "stason@gmail.com" ? (
           <Link to="/admin">
-            <GrUserAdmin
-              className={`${!scrolled ? "text-black" : "text-white"}`}
-              size={25}
-              cursor="pointer"
-            />
+            <GrUserAdmin className="text-black" size={25} cursor="pointer" />
           </Link>
         ) : (
           ""
