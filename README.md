@@ -41,7 +41,7 @@
 1. Clone the repository:
 
    ```bash
-   git clone hhttps://github.com/Stanislav588/e-commerce-stripe.git
+   git clone https://github.com/Stanislav588/e-commerce-stripe.git
 
    ```
 
