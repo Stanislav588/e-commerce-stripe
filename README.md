@@ -36,7 +36,7 @@
 - Express.js
 - RESTful API
 
-## Instalation
+## Installation
 
 1. Clone the repository:
 
