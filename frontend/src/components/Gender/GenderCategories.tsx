@@ -9,7 +9,7 @@ export const GenderCategories = () => {
         return (
           <div
             key={category?.id}
-            className="w-[400px]  overflow-hidden  relative cursor-pointer h-[500px] group"
+            className="w-[400px] overflow-hidden  relative cursor-pointer h-[500px] group"
           >
             <Link to={`/products/gender/${category.name}`}>
               <img

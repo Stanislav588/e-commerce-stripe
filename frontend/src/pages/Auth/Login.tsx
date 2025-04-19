@@ -8,13 +8,13 @@ import { useDispatch, useSelector } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
 
 import { enqueueSnackbar } from "notistack";
-import { AppDispatch } from "../../redux/store";
+import { AppDispatch, RootState } from "../../redux/store";
 
 export default function Login() {
   const navigate = useNavigate();
   const dispatch = useDispatch<AppDispatch>();
   window.scrollTo(0, 0);
-  const loader = useSelector((state: any) => state.auth.user.status);
+  const loader = useSelector((state: RootState) => state?.auth?.user?.status);
 
   const isLoading = loader === "loading";
   const {
@@ -92,10 +92,11 @@ export default function Login() {
       </form>
       <p className="mt-8">
         Don't have an account?{" "}
-        <Link to="/auth/register">
-          <span className="text-lg cursor-pointer font-semibold text-blue-500">
-            Sign up
-          </span>
+        <Link
+          className="text-lg cursor-pointer font-semibold text-blue-500"
+          to="/auth/register"
+        >
+          Sign Up
         </Link>
       </p>
     </div>

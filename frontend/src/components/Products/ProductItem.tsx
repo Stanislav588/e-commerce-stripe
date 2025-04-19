@@ -18,8 +18,10 @@ export const ProductItem: FC<Product> = ({
           <p className="font-semibold text-lg">{brand}</p>
           <p>{model}</p>
         </div>
-        {discount > 0 && (
+        {discount > 0 ? (
           <p className="text-lg text-red-500">$ {price - discount}</p>
+        ) : (
+          <p className="text-lg">$ {price}</p>
         )}
       </div>
       {rating >= 4 ? (

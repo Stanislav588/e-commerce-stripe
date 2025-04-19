@@ -24,6 +24,7 @@ export const store = configureStore({
     wishlist: wishListReducer,
     payment: paymentReducer,
   },
+
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware({
       serializableCheck: {

@@ -5,9 +5,10 @@
     { "path": "./tsconfig.node.json" }
   ],
   "compilerOptions": {
-    "jsx": "react-jsx", // ✅ enables the automatic JSX transform
+    "jsx": "react-jsx",
     "esModuleInterop": true,
+    "types": ["@testing-library/jest-dom", "node"],
     "allowImportingTsExtensions": true
   },
-  "include": ["src"]
+  "include": ["src", "tests/Footer.test.tsx"]
 }

@@ -1,3 +1,6 @@
 // eslint-disable-next-line no undef
 
-module.exports = "test-file-stub";
+module.exports = {
+  _esModule: true,
+  default: "test-file-stub",
+};

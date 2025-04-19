@@ -8,6 +8,7 @@ import {
   menProductCategories,
   womenProductCategories,
 } from "../../utils/categories";
+import "./Gender.css";
 export const Gender = () => {
   const { gender, category } = useParams();
   const dispatch = useDispatch<AppDispatch>();
@@ -23,6 +24,7 @@ export const Gender = () => {
       dispatch(fetchProductsByGenreAndCategory({ gender, category }));
     }
   }, [dispatch, gender, category]);
+
   return (
     <div>
       <div className="flex justify-center flex-wrap mt-12 gap-6">
@@ -31,7 +33,7 @@ export const Gender = () => {
             <div key={prod.id}>
               <Link to={`/all/category/${prod.title}/gender/${gender}`}>
                 <div className="p-2 text-center cursor-pointer">
-                  <div className="block w-[350px] h-[400px] relative mx-auto">
+                  <div className="gender block w-[350px] h-[400px] relative mx-auto">
                     <img
                       src={prod.icon}
                       className="text-9xl w-full h-full object-cover "

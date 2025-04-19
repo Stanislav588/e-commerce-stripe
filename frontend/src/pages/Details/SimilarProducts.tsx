@@ -45,7 +45,7 @@ export const SimilarProducts: FC<SimilarProductsProps> = ({
           <div>
             {similarProducts.length > 0 && (
               <>
-                <h1 className="text-4xl mb-5 text-black">
+                <h1 className="text-2xl md:text-3xl lg:text-4xl mb-5 text-black">
                   You might also like
                 </h1>
                 <div className="flex overflow-scroll overflow-x-auto gap-4">
@@ -63,7 +63,7 @@ export const SimilarProducts: FC<SimilarProductsProps> = ({
           <div>
             {similarShoes.length > 0 && (
               <>
-                <h1 className="text-4xl mb-5 text-black">
+                <h1 className="text-2xl md:text-3xl lg:text-4xl mb-5 text-black">
                   More {product?.category.toLowerCase()} of this brand
                 </h1>
                 <div className="flex overflow-scroll overflow-x-auto gap-4">
