@@ -4,7 +4,7 @@ import { RootState } from "../../redux/store";
 import { ProductItem } from "./ProductItem";
 import { Product } from "../../redux/types";
 
-export const ProductsByBrand = () => {
+export default function ProductsByBrand() {
   const { brand } = useParams();
   const products = useSelector((state: RootState) => state.item.products.data);
   window.scrollTo(0, 0);
@@ -28,4 +28,4 @@ export const ProductsByBrand = () => {
       </div>
     </div>
   );
-};
+}

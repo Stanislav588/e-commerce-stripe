@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-
 import { Genders, genders } from "../../utils/categories";
 
 export const GenderCategories = () => {

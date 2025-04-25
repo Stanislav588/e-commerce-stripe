@@ -5,7 +5,7 @@ import { AppDispatch, Product } from "../../redux/types";
 import { fetchProductFromWishList } from "../../redux/wishListSlice";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-export const WishList = () => {
+export default function WishList() {
   const dispatch = useDispatch<AppDispatch>();
 
   const wishlist = useSelector(
@@ -95,4 +95,4 @@ export const WishList = () => {
       </div>
     </motion.div>
   );
-};
+}

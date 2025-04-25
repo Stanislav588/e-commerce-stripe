@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 import { AppDispatch } from "../../redux/types";
 import { fetchCleanCart } from "../../redux/cartSlice";
 
-export const SuccessPage = () => {
+export default function SuccessPage() {
   const dispatch = useDispatch<AppDispatch>();
   const [sum, setSum] = useState<number>(0);
   const productsForPayment = useSelector(
@@ -75,4 +75,4 @@ export const SuccessPage = () => {
       </Box>
     </div>
   );
-};
+}

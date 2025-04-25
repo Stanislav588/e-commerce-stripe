@@ -6,7 +6,7 @@ import { AppDispatch, Product } from "../../redux/types";
 import { fetchAddNewProduct } from "../../redux/productSlice";
 import axios from "axios";
 
-export const AdminPage = () => {
+export default function AdminPage() {
   const dispatch = useDispatch<AppDispatch>();
   const imgRef = useRef<HTMLInputElement | null>(null);
   const optionalImgRef = useRef<HTMLInputElement | null>(null);
@@ -243,4 +243,4 @@ export const AdminPage = () => {
       </div>
     </div>
   );
-};
+}

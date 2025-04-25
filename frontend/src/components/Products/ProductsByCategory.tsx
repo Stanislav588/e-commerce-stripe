@@ -7,7 +7,7 @@ import { ProductsFilter } from "../ProductsFilter/ProductsFilter";
 import { useContext, useEffect, useState } from "react";
 import { ContextApi } from "../context/ContextApi";
 
-export const ProductsByCategory = () => {
+export default function ProductsByCategory() {
   const { selectedBrand, selectedColor, selectedFrom, selectedTo } =
     useContext(ContextApi);
   const { category, gender } = useParams();
@@ -79,4 +79,4 @@ export const ProductsByCategory = () => {
       </div>
     </div>
   );
-};
+}

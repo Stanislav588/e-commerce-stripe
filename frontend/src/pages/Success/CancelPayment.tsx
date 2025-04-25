@@ -2,7 +2,7 @@ import { Box, Button } from "@mui/material";
 import { MdOutlineCancel } from "react-icons/md";
 import { Link } from "react-router-dom";
 
-export const CancelPayment = () => {
+export default function CancelPayment() {
   return (
     <div className="flex flex-col gap-4 text-center py-20">
       <MdOutlineCancel className="text-red-500 block mx-auto" size={100} />
@@ -15,4 +15,4 @@ export const CancelPayment = () => {
       </Link>
     </div>
   );
-};
+}

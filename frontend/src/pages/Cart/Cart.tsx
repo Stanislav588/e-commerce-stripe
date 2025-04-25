@@ -8,7 +8,7 @@ import { motion } from "framer-motion";
 import { Button } from "@mui/material";
 import { RootState } from "../../redux/store";
 import { fetchAddPayment } from "../../redux/paymentSlice";
-export const Cart = () => {
+export default function Cart() {
   const [sum, setSum] = useState<number>(0);
 
   window.scrollTo(0, 0);
@@ -189,4 +189,4 @@ export const Cart = () => {
       )}
     </motion.div>
   );
-};
+}

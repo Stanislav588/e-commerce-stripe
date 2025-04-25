@@ -40,7 +40,7 @@ mongoDB;
 app.use(express.json());
 app.use(
   cors({
-    origin: "http://localhost:4502",
+    origin: "http://localhost:4500",
     credentials: true,
   })
 );

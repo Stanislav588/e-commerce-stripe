@@ -9,7 +9,7 @@ import {
   womenProductCategories,
 } from "../../utils/categories";
 import "./Gender.css";
-export const Gender = () => {
+export default function Gender() {
   const { gender, category } = useParams();
   const dispatch = useDispatch<AppDispatch>();
   window.scrollTo(0, 0);
@@ -50,4 +50,4 @@ export const Gender = () => {
       </div>
     </div>
   );
-};
+}
